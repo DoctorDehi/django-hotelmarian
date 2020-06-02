@@ -1,0 +1,145 @@
+{% extends "app/base.html" %}
+{% block title %}Domovská stránka - {% endblock %}
+{% block content %}
+{%  load static %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animated fadeInDown">Vítá Vás <span>hotel Marián</span></h2>
+          <p class="animated fadeInUp">Vítejte v jednom z nejlepších 5-hvězdičkových hotelů v jižních Čechách. Jedna z nejstarších a nejlépe dochovaných staveb v Českém Krumlově, Hotel Marián, je oslavou českého dědictví. Náš stylový hotel se nachází v bývalé Jezuitské koleji ze 16. století v jedinečném historickém centru města Český Krumlov, které je zapsáno na seznamu světového dědictví UNESCO.</p>
+          <a href="{% url 'app:rezervace' %}" class="btn-get-started animated fadeInUp">Objednat pokoj</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animated fadeInDown">Na první pohled unikát</h2>
+          <p class="animated fadeInUp">Unikátní prostředí Vás obklopí hned, jakmile vstoupíte do hotelu. Všech 71 pokojů je zařízeno s důrazem na komfort a jednotlivé detaily. Klenby, stropy, unikátní fresky a malby jsou autentickou součástí hotelu. Vychutnejte si rozmanité pokrmy podle místních i mezinárodních kulinářských tradic v naší restauraci. Pokud hledáte neobvyklý prostor pro svou konferenci či romantické místo pro uspořádání svatby, podívejte se na naše historické prostory nebo velkolepou letní terasu. Nechte se hýčkat v našem Wellness centru při thajské masáži. Přijďte si odpočinout do bazénu nebo sauny. </p>
+          <a href="{% url 'app:rezervace' %}" class="btn-get-started animated fadeInUp">Objednat pokoj</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animated fadeInDown">Jedním slovem luxus</h2>
+          <p class="animated fadeInUp">Hotel Marián je nejlepší hotel v Českém Krumlově. Renesanční budova bývalého Jezuitského kláštera a university ze 16. století si zachovala krásu renesanční architektury ač prodělala v poslední době rozsáhlou rekonstrukci vnitřních prostor. Luxusní pětihvězdičkový hotel v duchu renesance Vám nabízí veškerý komfort.</p>
+          <a href="{% url 'app:rezervace' %}" class="btn-get-started animated fadeInUp">Objednat pokoj</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Předchozí</span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Další</span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Features Section ======= -->
+    <section class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Co nabízíme?</h2>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="{% static 'app/assets/img/Hotel_Ruze___Lobby_Bar.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4">
+            <h3>Gastronomický zážitek v Českém Krumlově.</h3>
+            <p class="font-italic">
+              Pouze čerstvé sezónní a místní ingredience té nejvyšší kvality se používají na přípravu jídel pro hosty v naší hotelové restauraci v Českém Krumlově.
+            </p>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="{% static 'app/assets/img/HotelRuze_WellnessCenter_1.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3>Vaše wellness v Českém Krumlově</h3>
+            <p class="font-italic">
+                Uvolněte tělo i mysl díky originální thajské masáži rodilými thajskými masérkami, které mají v tomto oboru dlouholeté zkušenosti a za sebou několik akreditací.</p>
+                <ul>
+                  <li><i class="icofont-check"></i>Dopřejte si relaxaci našem bazénu nebo prohřejte tělo v sauně.</li>
+                  <li><i class="icofont-check"></i>Naše wellness centrum s thajskými masážemi budete opouštět s pocitem svěžesti a posíleni novou energií.</li>
+                </ul>
+          </div>
+         </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="{% static 'app/assets/img/Hotel_Ruze___View___6.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5">
+            <h3>Objevte kouzlo UNESCO města Český Krumlov</h3>
+            <p>Klikaté romantické uličky, krásný zámek tyčící se nad meandrující řekou Vltavou, jedinečný komplex starých městských domů, hospůdek, kaváren a středověkých krčem s množstvím turistů z nejrůznějších koutů světa. To je Český Krumlov, město s jedinečnou atmosférou, obklopené nedotčenou přírodou.</p>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="{% static 'app/assets/img/Hotel_Ruze___Medieval_dinner___2.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3>Vraťte se v čase</h3>
+            <p class="font-italic">
+              Málokterý hotel se může pyšnit tak bohatou historií, jako českokrumlovský Hotel Marián.
+            </p>
+          <p>
+              V roce 1584 totiž přivedl Vilém z Rožmberka, rytíř Zlatého rouna a nejvyšší purkrabí pražský, do svého sídla v Českém Krumlově jezuity a rozhodl se, že jim tu postaví rezidenci. Základní kámen koleje byl položen 19. března 1586 a už 16. května 1588 odevzdal Vilém klíče od hotové budovy spolu se zakládací listinou představitelům řádu.
+          </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+      <!-- ======= Service Details Section ======= -->
+    <section id="pokoje" class="service-details">
+      <div class="container">
+          <div class="section-title">
+          <h2>Pokoje</h2>
+          <p>Hotel Marián nabízí ubytování ve výjimečném stylu a pohodlí s dechberoucím výhledem na zámek v Českém Krumlově nebo nádherným výhledem na řeku Vltavu. Hotel poskytuje výběr ze 71 luxusních pokojů, včetně 4 designových apartmánů. Všechny pokoje jsou nekuřácké.</p>
+        </div>
+
+        <div class="row">
+        {% for pokoj in pokoje %}
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static pokoj.obrazek %}" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="{% url 'app:detailpokoje' pokoj.objekt.id %}">{{ pokoj.objekt.nazev }}</a></h5>
+                <p class="card-text">Počet lůžek: {{ pokoj.objekt.pocet_luzek }}</p>
+                  <p class="card-text">Cena za noc: {{ pokoj.objekt.cena }}Kč</p>
+                <div class="read-more"><a href="{% url 'app:detailpokoje' pokoj.objekt.id %}"><i class="icofont-arrow-right"></i> Více info</a></div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </section><!-- End Service Details Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}

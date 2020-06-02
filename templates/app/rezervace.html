@@ -1,0 +1,57 @@
+{% extends "app/base.html" %}
+{% block title %}Rezervace pokoje - {% endblock %}
+{% block content %}
+{%  load static %}
+
+  <main id="main">
+    <!-- ======= Navigation Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h1>Rezervace pokoje</h1>
+          <ol>
+            <li><a href="{% url 'app:index' %}">Domů</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Navigation Section -->
+
+    <div class="container">
+        {% if message %}
+            <p class="{{ message.class }}">{{ message.text }}</p>
+        {% endif %}
+        <form method="post">
+        {% csrf_token %}
+          <div class="form-group">
+            <label for="pokoj">Vyberte pokoj: </label>
+            {{ form.pokoj }}
+          </div>
+          <div class="form-group">
+            <label for="pocet_noci">Počet nocí: </label>
+            {{ form.pocet_noci }}
+          </div>
+          <div class="form-group">
+            <label for="jmeno">Jméno: </label>
+            {{ form.jmeno }}
+          </div>
+          <div class="form-group">
+            <label for="adresa">Vaše adresa: </label>
+            {{ form.adresa }}
+          </div>
+          <div class="form-group">
+            <label for="datum_prijezdu">Datum příjezdu: </label>
+            {{ form.datum_prijezdu }}
+          </div>
+          <div class="form-group">
+            <label for="datum_odjezdu">Datum odjezdu: </label>
+            {{ form.datum_odjezdu }}
+          </div>
+
+          <button type="submit" class="btn btn-info">Potvrdit</button>
+        </form>
+    </div>
+
+  </main>
+{% endblock %}

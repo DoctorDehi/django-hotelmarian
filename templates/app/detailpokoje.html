@@ -1,0 +1,42 @@
+{% extends "app/base.html" %}
+{% block title %}{{ object.nazev }} - {% endblock %}
+{% block content %}
+{%  load static %}
+
+  <main id="main">
+<!-- ======= About Us Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>{{ object.nazev }}</h2>
+          <ol>
+            <li><a href="{% url 'app:index' %}#pokoje">Pokoje</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{% static obrazek %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>{{ object.popis }}</p>
+            <ul>
+              <li><i class="icofont-check-circled"></i> Počet lůžek: {{ object.pocet_luzek }}</li>
+              <li><i class="icofont-check-circled"></i> Cena za noc: {{ object.cena }}Kč</li>
+            </ul>
+            <a href="{% url 'app:rezervace' %}">Rezervovat pokoj</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+  </main>
+{% endblock %}
